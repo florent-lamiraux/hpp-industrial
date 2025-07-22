@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hpp-industrial</name>
+  <version>0.0.1</version>
+  <description>Some methods and algorithms tailored for industrial robots</description>
+
+  <maintainer email="florent.lamiraux@laas.fr">Florent Lamiraux</maintainer>
+
+  <depend>hpp-manipulation</depend>
+  <depend>hpp-python</depend>
+  <license>BSD</license>
+
+
+  <!-- Url tags are optional, but multiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/agimus_demos</url> -->
+
+
+  <author email="florent.lamiraux@laas.fr">Florent Lamiraux</author>
+</package>
