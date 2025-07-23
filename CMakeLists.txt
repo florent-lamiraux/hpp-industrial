@@ -59,17 +59,25 @@ endif()
 
 include("${JRL_CMAKE_MODULES}/hpp.cmake")
 include("${JRL_CMAKE_MODULES}/boost.cmake")
+include("${JRL_CMAKE_MODULES}/python.cmake")
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules/ ${CMAKE_MODULE_PATH})
 
 compute_project_args(PROJECT_ARGS LANGUAGES CXX)
 project(${PROJECT_NAME} ${PROJECT_ARGS})
 
+set(PYTHON_COMPONENTS Interpreter Development NumPy)
+findpython()
+search_for_boost_python()
+
 add_project_dependency(hpp-manipulation REQUIRED)
+add_project_dependency(hpp-python REQUIRED)
 
 # Declare Headers
 set(${PROJECT_NAME}_HEADERS
-    include/hpp/industrial/path-planner/cartesian-rrt.hh)
+    include/hpp/industrial/path-planner/cartesian-rrt.hh
+    include/pyhpp/industrial/path_planner/cartesian_rrt.hh
+    )
 
 # Source files
 set(${PROJECT_NAME}_SOURCES
@@ -89,3 +97,5 @@ install(
 
 install(FILES package.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME})
 install(DIRECTORY urdf DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME})
+
+add_subdirectory(python)
