@@ -65,7 +65,12 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake-modules/ ${CMAKE_MODULE_PATH})
 compute_project_args(PROJECT_ARGS LANGUAGES CXX)
 project(${PROJECT_NAME} ${PROJECT_ARGS})
 
+set(PYTHON_COMPONENTS Interpreter Development NumPy)
+findpython()
+search_for_boost_python()
+
 add_project_dependency(hpp-manipulation REQUIRED)
+add_project_dependency(hpp-python REQUIRED)
 
 # Declare Headers
 set(${PROJECT_NAME}_HEADERS
@@ -86,3 +91,5 @@ install(
   TARGETS ${PROJECT_NAME}
   EXPORT ${TARGETS_EXPORT_NAME}
   DESTINATION lib)
+
+add_subdirectory(python)
