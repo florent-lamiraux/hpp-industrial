@@ -1,0 +1,30 @@
+<robot name="shelves">
+  <contact name="floor_0">
+    <link name="base_link"/>
+    <point>
+      0.1 0.49 0.01 -0.1 0.49 0.01 -0.1 -0.49 0.01 0.1 -0.49 0.01
+    </point>
+    <shape> 4 0 1 2 3 </shape>
+  </contact>
+  <contact name="floor_1">
+    <link name="base_link"/>
+    <point>
+      0.1 0.49 0.25 -0.1 0.49 0.25 -0.1 -0.49 0.25 0.1 -0.49 0.25
+    </point>
+    <shape> 4 0 1 2 3 </shape>
+  </contact>
+  <contact name="floor_2">
+    <link name="base_link"/>
+    <point>
+      0.1 0.49 0.505 -0.1 0.49 0.505 -0.1 -0.49 0.505 0.1 -0.49 0.505
+    </point>
+    <shape> 4 0 1 2 3 </shape>
+  </contact>
+  <contact name="floor_3">
+    <link name="base_link"/>
+    <point>
+      0.1 0.49 0.76 -0.1 0.49 0.76 -0.1 -0.49 0.76 0.1 -0.49 0.76
+    </point>
+    <shape> 4 0 1 2 3 </shape>
+  </contact>
+</robot>

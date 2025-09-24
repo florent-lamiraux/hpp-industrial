@@ -1,0 +1,12 @@
+<robot name="cylinder">
+  <handle name="h1" clearance = ".025">
+    <position xyz="0 0 0" wxyz="1 0 0 0"/>
+    <link name="base_link"/>
+  </handle>
+  <contact name="bottom">
+    <link name="base_link"/>
+    <point> 0.017 0.017 -0.04 0.017 -0.017 -0.04 -0.017 -0.017 -0.04 -0.017 0.017 -0.04
+    </point>
+    <shape> 4 0 1 2 3 </shape>
+  </contact>
+</robot>

@@ -1,0 +1,14 @@
+<robot name="cylinder">
+  <link name="base_link">
+    <collision>
+      <geometry>
+	<cylinder radius=".025" length=".08"/>
+      </geometry>
+    </collision>
+    <visual>
+      <geometry>
+	<cylinder radius=".025" length=".08"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
